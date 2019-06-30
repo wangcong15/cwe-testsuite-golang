@@ -1,13 +1,15 @@
 package main
 
 import (
-	"math"
-
 	"github.com/wangcong15/goassert"
 )
 
+func unTrustedNumber() int16 {
+	return -32768
+}
+
 func main() {
-	var int16_val int16 = -32768
-	goassert.AssertGte(int32(int16_val)-1, math.MinInt16)
+	var int16_val int16 = unTrustedNumber()
+	goassert.AssertUnderflow(int16_val, 1, int16_val-1)
 	int16_val = int16_val - 1
 }
