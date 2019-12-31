@@ -11,17 +11,22 @@ func main() {
 
 	import (
 		"log"
+	
+		"github.com/wangcong15/goassert"
 	)
 	
 	func unTrustFunc() int {
-		return 0
+		return 4
 	}
 	
 	func main() {
-		var intVal int = unTrustFunc()
-		intVal = 5 / intVal
-		log.Println(intVal)
-	}	
+		arr := [...]int{1, 2, 3, 4}
+		idx := unTrustFunc()
+		goassert.AssertGte(idx, 0)
+		goassert.AssertLt(idx, len(arr))
+		arr[idx] = 5
+		log.Println(arr)
+	}		
 	`
 	fset := token.NewFileSet()
 	f, _ := parser.ParseFile(fset, "", rawCode, parser.ParseComments)
