@@ -1,0 +1,228 @@
+     0  *ast.File {
+     1  .  Package: 1:1
+     2  .  Name: *ast.Ident {
+     3  .  .  NamePos: 1:9
+     4  .  .  Name: "main"
+     5  .  }
+     6  .  Decls: []ast.Decl (len = 2) {
+     7  .  .  0: *ast.GenDecl {
+     8  .  .  .  TokPos: 3:2
+     9  .  .  .  Tok: import
+    10  .  .  .  Lparen: 3:9
+    11  .  .  .  Specs: []ast.Spec (len = 1) {
+    12  .  .  .  .  0: *ast.ImportSpec {
+    13  .  .  .  .  .  Path: *ast.BasicLit {
+    14  .  .  .  .  .  .  ValuePos: 4:3
+    15  .  .  .  .  .  .  Kind: STRING
+    16  .  .  .  .  .  .  Value: "\"log\""
+    17  .  .  .  .  .  }
+    18  .  .  .  .  .  EndPos: -
+    19  .  .  .  .  }
+    20  .  .  .  }
+    21  .  .  .  Rparen: 5:2
+    22  .  .  }
+    23  .  .  1: *ast.FuncDecl {
+    24  .  .  .  Name: *ast.Ident {
+    25  .  .  .  .  NamePos: 7:7
+    26  .  .  .  .  Name: "main"
+    27  .  .  .  .  Obj: *ast.Object {
+    28  .  .  .  .  .  Kind: func
+    29  .  .  .  .  .  Name: "main"
+    30  .  .  .  .  .  Decl: *(obj @ 23)
+    31  .  .  .  .  }
+    32  .  .  .  }
+    33  .  .  .  Type: *ast.FuncType {
+    34  .  .  .  .  Func: 7:2
+    35  .  .  .  .  Params: *ast.FieldList {
+    36  .  .  .  .  .  Opening: 7:11
+    37  .  .  .  .  .  Closing: 7:12
+    38  .  .  .  .  }
+    39  .  .  .  }
+    40  .  .  .  Body: *ast.BlockStmt {
+    41  .  .  .  .  Lbrace: 7:14
+    42  .  .  .  .  List: []ast.Stmt (len = 3) {
+    43  .  .  .  .  .  0: *ast.AssignStmt {
+    44  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+    45  .  .  .  .  .  .  .  0: *ast.Ident {
+    46  .  .  .  .  .  .  .  .  NamePos: 8:3
+    47  .  .  .  .  .  .  .  .  Name: "happyNewYear"
+    48  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    49  .  .  .  .  .  .  .  .  .  Kind: var
+    50  .  .  .  .  .  .  .  .  .  Name: "happyNewYear"
+    51  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 43)
+    52  .  .  .  .  .  .  .  .  }
+    53  .  .  .  .  .  .  .  }
+    54  .  .  .  .  .  .  }
+    55  .  .  .  .  .  .  TokPos: 8:16
+    56  .  .  .  .  .  .  Tok: :=
+    57  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+    58  .  .  .  .  .  .  .  0: *ast.CompositeLit {
+    59  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+    60  .  .  .  .  .  .  .  .  .  Lbrack: 8:19
+    61  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+    62  .  .  .  .  .  .  .  .  .  .  NamePos: 8:21
+    63  .  .  .  .  .  .  .  .  .  .  Name: "string"
+    64  .  .  .  .  .  .  .  .  .  }
+    65  .  .  .  .  .  .  .  .  }
+    66  .  .  .  .  .  .  .  .  Lbrace: 8:27
+    67  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 3) {
+    68  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+    69  .  .  .  .  .  .  .  .  .  .  ValuePos: 8:28
+    70  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+    71  .  .  .  .  .  .  .  .  .  .  Value: "\"Happy\""
+    72  .  .  .  .  .  .  .  .  .  }
+    73  .  .  .  .  .  .  .  .  .  1: *ast.BasicLit {
+    74  .  .  .  .  .  .  .  .  .  .  ValuePos: 8:37
+    75  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+    76  .  .  .  .  .  .  .  .  .  .  Value: "\"New\""
+    77  .  .  .  .  .  .  .  .  .  }
+    78  .  .  .  .  .  .  .  .  .  2: *ast.BasicLit {
+    79  .  .  .  .  .  .  .  .  .  .  ValuePos: 8:44
+    80  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+    81  .  .  .  .  .  .  .  .  .  .  Value: "\"Year\""
+    82  .  .  .  .  .  .  .  .  .  }
+    83  .  .  .  .  .  .  .  .  }
+    84  .  .  .  .  .  .  .  .  Rbrace: 8:50
+    85  .  .  .  .  .  .  .  .  Incomplete: false
+    86  .  .  .  .  .  .  .  }
+    87  .  .  .  .  .  .  }
+    88  .  .  .  .  .  }
+    89  .  .  .  .  .  1: *ast.AssignStmt {
+    90  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+    91  .  .  .  .  .  .  .  0: *ast.Ident {
+    92  .  .  .  .  .  .  .  .  NamePos: 9:3
+    93  .  .  .  .  .  .  .  .  Name: "lens"
+    94  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    95  .  .  .  .  .  .  .  .  .  Kind: var
+    96  .  .  .  .  .  .  .  .  .  Name: "lens"
+    97  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 89)
+    98  .  .  .  .  .  .  .  .  }
+    99  .  .  .  .  .  .  .  }
+   100  .  .  .  .  .  .  }
+   101  .  .  .  .  .  .  TokPos: 9:8
+   102  .  .  .  .  .  .  Tok: :=
+   103  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   104  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   105  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
+   106  .  .  .  .  .  .  .  .  .  NamePos: 9:11
+   107  .  .  .  .  .  .  .  .  .  Name: "len"
+   108  .  .  .  .  .  .  .  .  }
+   109  .  .  .  .  .  .  .  .  Lparen: 9:14
+   110  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   111  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   112  .  .  .  .  .  .  .  .  .  .  NamePos: 9:15
+   113  .  .  .  .  .  .  .  .  .  .  Name: "happyNewYear"
+   114  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 48)
+   115  .  .  .  .  .  .  .  .  .  }
+   116  .  .  .  .  .  .  .  .  }
+   117  .  .  .  .  .  .  .  .  Ellipsis: -
+   118  .  .  .  .  .  .  .  .  Rparen: 9:27
+   119  .  .  .  .  .  .  .  }
+   120  .  .  .  .  .  .  }
+   121  .  .  .  .  .  }
+   122  .  .  .  .  .  2: *ast.ForStmt {
+   123  .  .  .  .  .  .  For: 10:3
+   124  .  .  .  .  .  .  Init: *ast.AssignStmt {
+   125  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   126  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   127  .  .  .  .  .  .  .  .  .  NamePos: 10:7
+   128  .  .  .  .  .  .  .  .  .  Name: "i"
+   129  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   130  .  .  .  .  .  .  .  .  .  .  Kind: var
+   131  .  .  .  .  .  .  .  .  .  .  Name: "i"
+   132  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 124)
+   133  .  .  .  .  .  .  .  .  .  }
+   134  .  .  .  .  .  .  .  .  }
+   135  .  .  .  .  .  .  .  }
+   136  .  .  .  .  .  .  .  TokPos: 10:9
+   137  .  .  .  .  .  .  .  Tok: :=
+   138  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   139  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   140  .  .  .  .  .  .  .  .  .  ValuePos: 10:12
+   141  .  .  .  .  .  .  .  .  .  Kind: INT
+   142  .  .  .  .  .  .  .  .  .  Value: "0"
+   143  .  .  .  .  .  .  .  .  }
+   144  .  .  .  .  .  .  .  }
+   145  .  .  .  .  .  .  }
+   146  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   147  .  .  .  .  .  .  .  X: *ast.Ident {
+   148  .  .  .  .  .  .  .  .  NamePos: 10:15
+   149  .  .  .  .  .  .  .  .  Name: "i"
+   150  .  .  .  .  .  .  .  .  Obj: *(obj @ 129)
+   151  .  .  .  .  .  .  .  }
+   152  .  .  .  .  .  .  .  OpPos: 10:17
+   153  .  .  .  .  .  .  .  Op: <=
+   154  .  .  .  .  .  .  .  Y: *ast.Ident {
+   155  .  .  .  .  .  .  .  .  NamePos: 10:20
+   156  .  .  .  .  .  .  .  .  Name: "lens"
+   157  .  .  .  .  .  .  .  .  Obj: *(obj @ 94)
+   158  .  .  .  .  .  .  .  }
+   159  .  .  .  .  .  .  }
+   160  .  .  .  .  .  .  Post: *ast.IncDecStmt {
+   161  .  .  .  .  .  .  .  X: *ast.Ident {
+   162  .  .  .  .  .  .  .  .  NamePos: 10:26
+   163  .  .  .  .  .  .  .  .  Name: "i"
+   164  .  .  .  .  .  .  .  .  Obj: *(obj @ 129)
+   165  .  .  .  .  .  .  .  }
+   166  .  .  .  .  .  .  .  TokPos: 10:27
+   167  .  .  .  .  .  .  .  Tok: ++
+   168  .  .  .  .  .  .  }
+   169  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   170  .  .  .  .  .  .  .  Lbrace: 10:30
+   171  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   172  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   173  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   174  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   175  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   176  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 11:4
+   177  .  .  .  .  .  .  .  .  .  .  .  .  Name: "log"
+   178  .  .  .  .  .  .  .  .  .  .  .  }
+   179  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   180  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 11:8
+   181  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Println"
+   182  .  .  .  .  .  .  .  .  .  .  .  }
+   183  .  .  .  .  .  .  .  .  .  .  }
+   184  .  .  .  .  .  .  .  .  .  .  Lparen: 11:15
+   185  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   186  .  .  .  .  .  .  .  .  .  .  .  0: *ast.IndexExpr {
+   187  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   188  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 11:16
+   189  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "happyNewYear"
+   190  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 48)
+   191  .  .  .  .  .  .  .  .  .  .  .  .  }
+   192  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: 11:28
+   193  .  .  .  .  .  .  .  .  .  .  .  .  Index: *ast.Ident {
+   194  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 11:29
+   195  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "i"
+   196  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 129)
+   197  .  .  .  .  .  .  .  .  .  .  .  .  }
+   198  .  .  .  .  .  .  .  .  .  .  .  .  Rbrack: 11:30
+   199  .  .  .  .  .  .  .  .  .  .  .  }
+   200  .  .  .  .  .  .  .  .  .  .  }
+   201  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   202  .  .  .  .  .  .  .  .  .  .  Rparen: 11:31
+   203  .  .  .  .  .  .  .  .  .  }
+   204  .  .  .  .  .  .  .  .  }
+   205  .  .  .  .  .  .  .  }
+   206  .  .  .  .  .  .  .  Rbrace: 12:3
+   207  .  .  .  .  .  .  }
+   208  .  .  .  .  .  }
+   209  .  .  .  .  }
+   210  .  .  .  .  Rbrace: 13:2
+   211  .  .  .  }
+   212  .  .  }
+   213  .  }
+   214  .  Scope: *ast.Scope {
+   215  .  .  Objects: map[string]*ast.Object (len = 1) {
+   216  .  .  .  "main": *(obj @ 27)
+   217  .  .  }
+   218  .  }
+   219  .  Imports: []*ast.ImportSpec (len = 1) {
+   220  .  .  0: *(obj @ 12)
+   221  .  }
+   222  .  Unresolved: []*ast.Ident (len = 3) {
+   223  .  .  0: *(obj @ 61)
+   224  .  .  1: *(obj @ 105)
+   225  .  .  2: *(obj @ 175)
+   226  .  }
+   227  }

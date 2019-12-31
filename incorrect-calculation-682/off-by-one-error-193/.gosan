@@ -1,0 +1,1 @@
+193	11	goassert.AssertLt(lens, len(happyNewYear))	/home/acong/go/src/github.com/wangcong15/cwe-testsuite-golang/incorrect-calculation-682/off-by-one-error-193/flaw.go
