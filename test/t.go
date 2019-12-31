@@ -9,23 +9,12 @@ import (
 func main() {
 	rawCode := `package main
 
-	import (
-		"log"
-	
-		"github.com/wangcong15/goassert"
-	)
-	
-	func unTrustFunc() int {
-		return 4
-	}
+	import "log"
 	
 	func main() {
-		arr := [...]int{1, 2, 3, 4}
-		idx := unTrustFunc()
-		goassert.AssertGte(idx, 0)
-		goassert.AssertLt(idx, len(arr))
-		arr[idx] = 5
-		log.Println(arr)
+		int_val := 4
+		arr_val := [...]int{1, 2, 3}
+		log.Println(arr_val[0:int_val])
 	}		
 	`
 	fset := token.NewFileSet()
