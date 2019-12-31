@@ -13,12 +13,14 @@ func main() {
 		"log"
 	)
 	
+	func unTrustFunc() int {
+		return 0
+	}
+	
 	func main() {
-		happyNewYear := []string{"Happy", "New", "Year"}
-		lens := len(happyNewYear)
-		for i := 0; i <= lens; i++ {
-			log.Println(happyNewYear[i])
-		}
+		var intVal int = unTrustFunc()
+		intVal = 5 / intVal
+		log.Println(intVal)
 	}	
 	`
 	fset := token.NewFileSet()

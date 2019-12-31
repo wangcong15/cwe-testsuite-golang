@@ -1,11 +1,15 @@
 package main
 
 import (
-	"github.com/wangcong15/goassert"
+	"log"
 )
 
+func unTrustFunc() int {
+	return 0
+}
+
 func main() {
-	var int_val int = 0
-	goassert.AssertNEq(int_val, 0)
-	int_val = 5 / int_val
+	var intVal int = unTrustFunc()
+	intVal = 5 / intVal
+	log.Println(intVal)
 }
